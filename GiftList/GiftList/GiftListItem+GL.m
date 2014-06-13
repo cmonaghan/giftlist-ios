@@ -10,13 +10,13 @@
 
 @implementation GiftListItem (GL)
 
-+ (GiftListItem *) itemWithId:(NSUInteger) itemId usingManagedContext:(NSManagedObjectContext *) context {
++ (GiftListItem *) itemWithId:(NSString *) itemId usingManagedContext:(NSManagedObjectContext *) context {
     GiftListItem * g = nil;
     
     //Make sure gage doesn't exist in context
     NSFetchRequest * request = [[NSFetchRequest alloc] initWithEntityName:@"GiftListItem"];
     request.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"itemId" ascending:YES]];
-    request.predicate = [NSPredicate predicateWithFormat:@"itemId = %d", itemId];
+    request.predicate = [NSPredicate predicateWithFormat:@"itemId = %@", itemId];
     
     NSArray * matches = [context executeFetchRequest:request error:nil];
     //Make sure that there's only 1
@@ -27,7 +27,7 @@
         g = [matches lastObject];
     } else {
         g = [NSEntityDescription insertNewObjectForEntityForName:@"GiftListItem" inManagedObjectContext:context];
-        g.itemId = [NSNumber numberWithInteger:itemId];
+        g.itemId = itemId;
     }
     
     return g;

@@ -9,5 +9,5 @@
 #import "GiftListItem.h"
 
 @interface GiftListItem (GL)
-+ (GiftListItem *) itemWithId:(NSUInteger) itemId usingManagedContext:(NSManagedObjectContext *) context;
++ (GiftListItem *) itemWithId:(NSString *) itemId usingManagedContext:(NSManagedObjectContext *) context;
 @end

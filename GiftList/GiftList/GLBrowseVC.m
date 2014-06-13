@@ -26,9 +26,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setPrice:nil];
-    [self setImage:nil];
-    [self setDescription:nil];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Items"];
+    [query getObjectInBackgroundWithId:@"VsKKzNb3Jc" block:^(PFObject *item, NSError *error) {
+        // Do something with the returned PFObject in the gameScore variable.
+        NSLog(@"%@", item);
+        [self setPrice:item[@"price"]];
+        [self setImage:item[@"productImage"]];
+        [self setDescription:item[@"title"]];
+    }];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -46,8 +53,7 @@
 }
 
 - (IBAction)yesButton:(id)sender {
-    NSUInteger integer = 5;
-    GiftListItem* item = [GiftListItem itemWithId:integer usingManagedContext:self.managedObjectContext];
+    GiftListItem* item = [GiftListItem itemWithId:@"asdfa" usingManagedContext:self.managedObjectContext];
     item.title = DEFAULT_DESCRIPTION;
     item.price = DEFAULT_PRICE;
     [self.managedObjectContext save:nil];
@@ -56,20 +62,23 @@
 - (IBAction)noButton:(id)sender {
 }
 
-- (void) setPrice:(NSString *) price {
+- (void) setPrice:(NSNumber *) price {
     if (price) {
-        self.priceLabel.text = price;
+        self.priceLabel.text = [NSString stringWithFormat:@"$%@", price];
     } else {
         self.priceLabel.text = DEFAULT_PRICE;
     }
 }
 
-- (void) setImage:(UIImage *) image {
-    if (! image) {
-        NSURL *url = [NSURL URLWithString: @"http://ecx.images-amazon.com/images/I/41juCzD8qWL.jpg"];
-        NSData *data = [NSData dataWithContentsOfURL:url];
-        image = [[UIImage alloc] initWithData:data];
+- (void) setImage:(NSString *) imageURL {
+    NSURL *url;
+    if (! imageURL) {
+        url = [NSURL URLWithString: @"http://ecx.images-amazon.com/images/I/41juCzD8qWL.jpg"];
+    } else {
+        url = [NSURL URLWithString: imageURL];
     }
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *image = [[UIImage alloc] initWithData:data];
     self.imageView.image = image;
 }
 

@@ -13,8 +13,8 @@
 @interface GiftListItem : NSManagedObject
 
 @property (nonatomic, retain) NSString * descriptionText;
-@property (nonatomic, retain) NSNumber * itemId;
 @property (nonatomic, retain) NSString * imageUrl;
+@property (nonatomic, retain) NSString * itemId;
 @property (nonatomic, retain) NSString * price;
 @property (nonatomic, retain) NSString * title;
 

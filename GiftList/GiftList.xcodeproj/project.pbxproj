@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FAB6C38194ACC3A00617160 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C37194ACC3A00617160 /* Parse.framework */; };
+		2FAB6C3A194ACC7100617160 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C39194ACC7100617160 /* AudioToolbox.framework */; };
+		2FAB6C3C194ACC7600617160 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C3B194ACC7600617160 /* CFNetwork.framework */; };
+		2FAB6C3E194ACC8800617160 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C3D194ACC8800617160 /* CoreLocation.framework */; };
+		2FAB6C40194ACC9200617160 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C3F194ACC9200617160 /* libz.dylib */; };
+		2FAB6C42194ACC9B00617160 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C41194ACC9B00617160 /* MobileCoreServices.framework */; };
+		2FAB6C44194ACCA400617160 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C43194ACCA300617160 /* QuartzCore.framework */; };
+		2FAB6C46194ACCAC00617160 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C45194ACCAC00617160 /* Security.framework */; };
+		2FAB6C48194ACCB200617160 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C47194ACCB200617160 /* StoreKit.framework */; };
+		2FAB6C4A194ACCBC00617160 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C49194ACCBC00617160 /* SystemConfiguration.framework */; };
+		2FAB6C4D194ACDF400617160 /* GiftListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB6C4C194ACDF400617160 /* GiftListItem.m */; };
 		2FECA3F0194A03A600F0224C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECA3EF194A03A600F0224C /* Foundation.framework */; };
 		2FECA3F2194A03A600F0224C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECA3F1194A03A600F0224C /* CoreGraphics.framework */; };
 		2FECA3F4194A03A600F0224C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECA3F3194A03A600F0224C /* UIKit.framework */; };
@@ -26,7 +37,6 @@
 		2FECA42E194AA1D900F0224C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECA42D194AA1D900F0224C /* CoreData.framework */; };
 		2FECA431194AA2B700F0224C /* GLModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA42F194AA2B700F0224C /* GLModel.xcdatamodeld */; };
 		2FECA487194AB9EF00F0224C /* GiftListItem+GL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA486194AB9EF00F0224C /* GiftListItem+GL.m */; };
-		2FECA48A194AC18800F0224C /* GiftListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA489194AC18800F0224C /* GiftListItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +50,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FAB6C37194ACC3A00617160 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		2FAB6C39194ACC7100617160 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2FAB6C3B194ACC7600617160 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2FAB6C3D194ACC8800617160 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2FAB6C3F194ACC9200617160 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		2FAB6C41194ACC9B00617160 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2FAB6C43194ACCA300617160 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2FAB6C45194ACCAC00617160 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2FAB6C47194ACCB200617160 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2FAB6C49194ACCBC00617160 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2FAB6C4B194ACDF400617160 /* GiftListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftListItem.h; sourceTree = "<group>"; };
+		2FAB6C4C194ACDF400617160 /* GiftListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftListItem.m; sourceTree = "<group>"; };
 		2FECA3EC194A03A600F0224C /* GiftList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FECA3EF194A03A600F0224C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2FECA3F1194A03A600F0224C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,8 +89,6 @@
 		2FECA430194AA2B700F0224C /* GLModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GLModel.xcdatamodel; sourceTree = "<group>"; };
 		2FECA485194AB9EF00F0224C /* GiftListItem+GL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GiftListItem+GL.h"; sourceTree = "<group>"; };
 		2FECA486194AB9EF00F0224C /* GiftListItem+GL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GiftListItem+GL.m"; sourceTree = "<group>"; };
-		2FECA488194AC18800F0224C /* GiftListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftListItem.h; sourceTree = "<group>"; };
-		2FECA489194AC18800F0224C /* GiftListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftListItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +96,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FECA42E194AA1D900F0224C /* CoreData.framework in Frameworks */,
+				2FAB6C4A194ACCBC00617160 /* SystemConfiguration.framework in Frameworks */,
+				2FAB6C48194ACCB200617160 /* StoreKit.framework in Frameworks */,
+				2FAB6C46194ACCAC00617160 /* Security.framework in Frameworks */,
+				2FAB6C44194ACCA400617160 /* QuartzCore.framework in Frameworks */,
+				2FAB6C42194ACC9B00617160 /* MobileCoreServices.framework in Frameworks */,
+				2FAB6C40194ACC9200617160 /* libz.dylib in Frameworks */,
+				2FAB6C3E194ACC8800617160 /* CoreLocation.framework in Frameworks */,
 				2FECA3F2194A03A600F0224C /* CoreGraphics.framework in Frameworks */,
+				2FAB6C3C194ACC7600617160 /* CFNetwork.framework in Frameworks */,
+				2FAB6C3A194ACC7100617160 /* AudioToolbox.framework in Frameworks */,
+				2FECA42E194AA1D900F0224C /* CoreData.framework in Frameworks */,
 				2FECA3F4194A03A600F0224C /* UIKit.framework in Frameworks */,
 				2FECA3F0194A03A600F0224C /* Foundation.framework in Frameworks */,
+				2FAB6C38194ACC3A00617160 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +148,16 @@
 		2FECA3EE194A03A600F0224C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FAB6C49194ACCBC00617160 /* SystemConfiguration.framework */,
+				2FAB6C47194ACCB200617160 /* StoreKit.framework */,
+				2FAB6C45194ACCAC00617160 /* Security.framework */,
+				2FAB6C43194ACCA300617160 /* QuartzCore.framework */,
+				2FAB6C41194ACC9B00617160 /* MobileCoreServices.framework */,
+				2FAB6C3F194ACC9200617160 /* libz.dylib */,
+				2FAB6C3D194ACC8800617160 /* CoreLocation.framework */,
+				2FAB6C3B194ACC7600617160 /* CFNetwork.framework */,
+				2FAB6C39194ACC7100617160 /* AudioToolbox.framework */,
+				2FAB6C37194ACC3A00617160 /* Parse.framework */,
 				2FECA42D194AA1D900F0224C /* CoreData.framework */,
 				2FECA3EF194A03A600F0224C /* Foundation.framework */,
 				2FECA3F1194A03A600F0224C /* CoreGraphics.framework */,
@@ -144,8 +184,8 @@
 				2FECA42F194AA2B700F0224C /* GLModel.xcdatamodeld */,
 				2FECA485194AB9EF00F0224C /* GiftListItem+GL.h */,
 				2FECA486194AB9EF00F0224C /* GiftListItem+GL.m */,
-				2FECA488194AC18800F0224C /* GiftListItem.h */,
-				2FECA489194AC18800F0224C /* GiftListItem.m */,
+				2FAB6C4B194ACDF400617160 /* GiftListItem.h */,
+				2FAB6C4C194ACDF400617160 /* GiftListItem.m */,
 			);
 			path = GiftList;
 			sourceTree = "<group>";
@@ -283,7 +323,7 @@
 				2FECA3FC194A03A600F0224C /* main.m in Sources */,
 				2FECA429194A97D600F0224C /* GLTableViewCell.m in Sources */,
 				2FECA400194A03A600F0224C /* GLAppDelegate.m in Sources */,
-				2FECA48A194AC18800F0224C /* GiftListItem.m in Sources */,
+				2FAB6C4D194ACDF400617160 /* GiftListItem.m in Sources */,
 				2FECA406194A03A600F0224C /* GLBrowseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +449,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GiftList/GiftList-Prefix.pch";
 				INFOPLIST_FILE = "GiftList/GiftList-Info.plist";
@@ -422,6 +466,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GiftList/GiftList-Prefix.pch";
 				INFOPLIST_FILE = "GiftList/GiftList-Info.plist";

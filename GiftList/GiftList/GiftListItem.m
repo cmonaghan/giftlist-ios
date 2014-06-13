@@ -12,8 +12,8 @@
 @implementation GiftListItem
 
 @dynamic descriptionText;
-@dynamic itemId;
 @dynamic imageUrl;
+@dynamic itemId;
 @dynamic price;
 @dynamic title;
 
