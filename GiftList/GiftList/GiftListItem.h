@@ -2,7 +2,7 @@
 //  GiftListItem.h
 //  GiftList
 //
-//  Created by Gregory Lee on 6/12/14.
+//  Created by Gregory Lee on 6/13/14.
 //  Copyright (c) 2014 Gregory Lee. All rights reserved.
 //
 
@@ -15,7 +15,7 @@
 @property (nonatomic, retain) NSString * descriptionText;
 @property (nonatomic, retain) NSString * imageUrl;
 @property (nonatomic, retain) NSString * itemId;
-@property (nonatomic, retain) NSString * price;
+@property (nonatomic, retain) NSNumber * price;
 @property (nonatomic, retain) NSString * title;
 
 @end

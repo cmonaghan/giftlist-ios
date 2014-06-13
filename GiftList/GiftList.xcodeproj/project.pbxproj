@@ -17,7 +17,7 @@
 		2FAB6C46194ACCAC00617160 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C45194ACCAC00617160 /* Security.framework */; };
 		2FAB6C48194ACCB200617160 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C47194ACCB200617160 /* StoreKit.framework */; };
 		2FAB6C4A194ACCBC00617160 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB6C49194ACCBC00617160 /* SystemConfiguration.framework */; };
-		2FAB6C4D194ACDF400617160 /* GiftListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB6C4C194ACDF400617160 /* GiftListItem.m */; };
+		2FAB6C50194ADA6C00617160 /* GiftListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB6C4F194ADA6C00617160 /* GiftListItem.m */; };
 		2FECA3F0194A03A600F0224C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECA3EF194A03A600F0224C /* Foundation.framework */; };
 		2FECA3F2194A03A600F0224C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECA3F1194A03A600F0224C /* CoreGraphics.framework */; };
 		2FECA3F4194A03A600F0224C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECA3F3194A03A600F0224C /* UIKit.framework */; };
@@ -60,8 +60,8 @@
 		2FAB6C45194ACCAC00617160 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2FAB6C47194ACCB200617160 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2FAB6C49194ACCBC00617160 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		2FAB6C4B194ACDF400617160 /* GiftListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftListItem.h; sourceTree = "<group>"; };
-		2FAB6C4C194ACDF400617160 /* GiftListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftListItem.m; sourceTree = "<group>"; };
+		2FAB6C4E194ADA6C00617160 /* GiftListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftListItem.h; sourceTree = "<group>"; };
+		2FAB6C4F194ADA6C00617160 /* GiftListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftListItem.m; sourceTree = "<group>"; };
 		2FECA3EC194A03A600F0224C /* GiftList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FECA3EF194A03A600F0224C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2FECA3F1194A03A600F0224C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -184,8 +184,8 @@
 				2FECA42F194AA2B700F0224C /* GLModel.xcdatamodeld */,
 				2FECA485194AB9EF00F0224C /* GiftListItem+GL.h */,
 				2FECA486194AB9EF00F0224C /* GiftListItem+GL.m */,
-				2FAB6C4B194ACDF400617160 /* GiftListItem.h */,
-				2FAB6C4C194ACDF400617160 /* GiftListItem.m */,
+				2FAB6C4E194ADA6C00617160 /* GiftListItem.h */,
+				2FAB6C4F194ADA6C00617160 /* GiftListItem.m */,
 			);
 			path = GiftList;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 				2FECA3FC194A03A600F0224C /* main.m in Sources */,
 				2FECA429194A97D600F0224C /* GLTableViewCell.m in Sources */,
 				2FECA400194A03A600F0224C /* GLAppDelegate.m in Sources */,
-				2FAB6C4D194ACDF400617160 /* GiftListItem.m in Sources */,
+				2FAB6C50194ADA6C00617160 /* GiftListItem.m in Sources */,
 				2FECA406194A03A600F0224C /* GLBrowseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,7 +390,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gregory Lee (8G3M422BMR)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -428,7 +428,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gregory Lee (CGGM2TJZ65)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -449,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gregory Lee (8G3M422BMR)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -456,7 +457,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GiftList/GiftList-Prefix.pch";
 				INFOPLIST_FILE = "GiftList/GiftList-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -466,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gregory Lee (CGGM2TJZ65)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -473,7 +477,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GiftList/GiftList-Prefix.pch";
 				INFOPLIST_FILE = "GiftList/GiftList-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

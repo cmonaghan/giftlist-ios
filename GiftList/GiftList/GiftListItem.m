@@ -2,7 +2,7 @@
 //  GiftListItem.m
 //  GiftList
 //
-//  Created by Gregory Lee on 6/12/14.
+//  Created by Gregory Lee on 6/13/14.
 //  Copyright (c) 2014 Gregory Lee. All rights reserved.
 //
 

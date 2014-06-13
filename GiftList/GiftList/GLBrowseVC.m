@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionText;
+@property (nonatomic) NSUInteger counter;
+@property (strong, nonatomic) GiftListItem *currentItem;
 
 @end
 
@@ -26,16 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.counter = 0;
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Items"];
-    [query getObjectInBackgroundWithId:@"VsKKzNb3Jc" block:^(PFObject *item, NSError *error) {
-        // Do something with the returned PFObject in the gameScore variable.
-        NSLog(@"%@", item);
-        [self setPrice:item[@"price"]];
-        [self setImage:item[@"productImage"]];
-        [self setDescription:item[@"title"]];
-    }];
-    
+    [self nextItem];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -53,13 +48,13 @@
 }
 
 - (IBAction)yesButton:(id)sender {
-    GiftListItem* item = [GiftListItem itemWithId:@"asdfa" usingManagedContext:self.managedObjectContext];
-    item.title = DEFAULT_DESCRIPTION;
-    item.price = DEFAULT_PRICE;
-    [self.managedObjectContext save:nil];
+    [self nextItem];
 }
 
 - (IBAction)noButton:(id)sender {
+    [self.managedObjectContext deleteObject:self.currentItem];
+    [self.managedObjectContext save:nil];
+    [self nextItem];
 }
 
 - (void) setPrice:(NSNumber *) price {
@@ -88,6 +83,37 @@
     } else {
         self.descriptionText.text = DEFAULT_DESCRIPTION;
     }
-    
+}
+
+- (void) nextItem {
+    PFQuery *query = [PFQuery queryWithClassName:@"Items"];
+    query.skip = self.counter;
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *item, NSError *error) {
+        NSLog(@"%@", item);
+        self.currentItem = [self itemFromPF:item];
+        [self.managedObjectContext save:nil];
+        self.counter++;
+        
+        [self display:self.currentItem];
+    }];
+}
+
+- (GiftListItem *) itemFromPF:(PFObject *) pfObject {
+    GiftListItem* item = [GiftListItem itemWithId:pfObject.objectId usingManagedContext:self.managedObjectContext];
+    NSNumber * thisPrice = pfObject[@"price"];
+    if(thisPrice == (id)[NSNull null]) {
+        thisPrice = 0;
+    }
+    item.price = thisPrice;
+    item.title = pfObject[@"title"];
+    item.imageUrl = pfObject[@"productImage"];
+    item.descriptionText = pfObject[@"title"];
+    return item;
+}
+
+- (void) display:(GiftListItem *) item {
+    [self setPrice:item.price];
+    [self setImage:item.imageUrl];
+    [self setDescription:item.descriptionText];
 }
 @end

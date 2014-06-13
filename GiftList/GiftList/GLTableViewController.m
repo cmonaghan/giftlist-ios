@@ -95,7 +95,7 @@
     if([rawCell isKindOfClass:[GLTableViewCell class]]) {
         GLTableViewCell *cell = (GLTableViewCell *) rawCell;
         cell.title.text = info.title;
-        cell.price.text = info.price;
+        cell.price.text = [NSString stringWithFormat:@"$%@", info.price];
     }
 }
 
