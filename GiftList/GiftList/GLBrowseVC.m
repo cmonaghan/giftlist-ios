@@ -7,6 +7,8 @@
 //
 
 #import "GLBrowseVC.h"
+#import "GiftListItem+GL.h"
+#import "GLAppDelegate.h"
 
 #define DEFAULT_PRICE @"$29.92"
 #define DEFAULT_IMAGE_URL = @"http://ecx.images-amazon.com/images/I/41juCzD8qWL.jpg"
@@ -35,7 +37,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(NSManagedObjectContext *) managedObjectContext {
+    if(!_managedObjectContext) {
+        _managedObjectContext = [(GLAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    }
+    return _managedObjectContext;
+}
+
 - (IBAction)yesButton:(id)sender {
+    NSUInteger integer = 5;
+    GiftListItem* item = [GiftListItem itemWithId:integer usingManagedContext:self.managedObjectContext];
+    item.title = DEFAULT_DESCRIPTION;
+    item.price = DEFAULT_PRICE;
+    [self.managedObjectContext save:nil];
 }
 
 - (IBAction)noButton:(id)sender {

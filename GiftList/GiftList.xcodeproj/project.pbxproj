@@ -15,13 +15,18 @@
 		2FECA400194A03A600F0224C /* GLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA3FF194A03A600F0224C /* GLAppDelegate.m */; };
 		2FECA403194A03A600F0224C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FECA401194A03A600F0224C /* Main.storyboard */; };
 		2FECA406194A03A600F0224C /* GLBrowseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA405194A03A600F0224C /* GLBrowseVC.m */; };
-		2FECA409194A03A600F0224C /* GLGiftListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA408194A03A600F0224C /* GLGiftListVC.m */; };
 		2FECA40B194A03A600F0224C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FECA40A194A03A600F0224C /* Images.xcassets */; };
 		2FECA412194A03A600F0224C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECA411194A03A600F0224C /* XCTest.framework */; };
 		2FECA413194A03A600F0224C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECA3EF194A03A600F0224C /* Foundation.framework */; };
 		2FECA414194A03A600F0224C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECA3F3194A03A600F0224C /* UIKit.framework */; };
 		2FECA41C194A03A600F0224C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FECA41A194A03A600F0224C /* InfoPlist.strings */; };
 		2FECA41E194A03A600F0224C /* GiftListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA41D194A03A600F0224C /* GiftListTests.m */; };
+		2FECA429194A97D600F0224C /* GLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA428194A97D600F0224C /* GLTableViewCell.m */; };
+		2FECA42C194A9ABE00F0224C /* GLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA42B194A9ABE00F0224C /* GLTableViewController.m */; };
+		2FECA42E194AA1D900F0224C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECA42D194AA1D900F0224C /* CoreData.framework */; };
+		2FECA431194AA2B700F0224C /* GLModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA42F194AA2B700F0224C /* GLModel.xcdatamodeld */; };
+		2FECA487194AB9EF00F0224C /* GiftListItem+GL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA486194AB9EF00F0224C /* GiftListItem+GL.m */; };
+		2FECA48A194AC18800F0224C /* GiftListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA489194AC18800F0224C /* GiftListItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,14 +53,22 @@
 		2FECA402194A03A600F0224C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FECA404194A03A600F0224C /* GLBrowseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLBrowseVC.h; sourceTree = "<group>"; };
 		2FECA405194A03A600F0224C /* GLBrowseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLBrowseVC.m; sourceTree = "<group>"; };
-		2FECA407194A03A600F0224C /* GLGiftListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLGiftListVC.h; sourceTree = "<group>"; };
-		2FECA408194A03A600F0224C /* GLGiftListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLGiftListVC.m; sourceTree = "<group>"; };
 		2FECA40A194A03A600F0224C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2FECA410194A03A600F0224C /* GiftListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiftListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FECA411194A03A600F0224C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2FECA419194A03A600F0224C /* GiftListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GiftListTests-Info.plist"; sourceTree = "<group>"; };
 		2FECA41B194A03A600F0224C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2FECA41D194A03A600F0224C /* GiftListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiftListTests.m; sourceTree = "<group>"; };
+		2FECA427194A97D600F0224C /* GLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTableViewCell.h; sourceTree = "<group>"; };
+		2FECA428194A97D600F0224C /* GLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTableViewCell.m; sourceTree = "<group>"; };
+		2FECA42A194A9ABE00F0224C /* GLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTableViewController.h; sourceTree = "<group>"; };
+		2FECA42B194A9ABE00F0224C /* GLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTableViewController.m; sourceTree = "<group>"; };
+		2FECA42D194AA1D900F0224C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2FECA430194AA2B700F0224C /* GLModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GLModel.xcdatamodel; sourceTree = "<group>"; };
+		2FECA485194AB9EF00F0224C /* GiftListItem+GL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GiftListItem+GL.h"; sourceTree = "<group>"; };
+		2FECA486194AB9EF00F0224C /* GiftListItem+GL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GiftListItem+GL.m"; sourceTree = "<group>"; };
+		2FECA488194AC18800F0224C /* GiftListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftListItem.h; sourceTree = "<group>"; };
+		2FECA489194AC18800F0224C /* GiftListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftListItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FECA42E194AA1D900F0224C /* CoreData.framework in Frameworks */,
 				2FECA3F2194A03A600F0224C /* CoreGraphics.framework in Frameworks */,
 				2FECA3F4194A03A600F0224C /* UIKit.framework in Frameworks */,
 				2FECA3F0194A03A600F0224C /* Foundation.framework in Frameworks */,
@@ -104,6 +118,7 @@
 		2FECA3EE194A03A600F0224C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FECA42D194AA1D900F0224C /* CoreData.framework */,
 				2FECA3EF194A03A600F0224C /* Foundation.framework */,
 				2FECA3F1194A03A600F0224C /* CoreGraphics.framework */,
 				2FECA3F3194A03A600F0224C /* UIKit.framework */,
@@ -120,10 +135,17 @@
 				2FECA401194A03A600F0224C /* Main.storyboard */,
 				2FECA404194A03A600F0224C /* GLBrowseVC.h */,
 				2FECA405194A03A600F0224C /* GLBrowseVC.m */,
-				2FECA407194A03A600F0224C /* GLGiftListVC.h */,
-				2FECA408194A03A600F0224C /* GLGiftListVC.m */,
+				2FECA42A194A9ABE00F0224C /* GLTableViewController.h */,
+				2FECA42B194A9ABE00F0224C /* GLTableViewController.m */,
 				2FECA40A194A03A600F0224C /* Images.xcassets */,
 				2FECA3F6194A03A600F0224C /* Supporting Files */,
+				2FECA427194A97D600F0224C /* GLTableViewCell.h */,
+				2FECA428194A97D600F0224C /* GLTableViewCell.m */,
+				2FECA42F194AA2B700F0224C /* GLModel.xcdatamodeld */,
+				2FECA485194AB9EF00F0224C /* GiftListItem+GL.h */,
+				2FECA486194AB9EF00F0224C /* GiftListItem+GL.m */,
+				2FECA488194AC18800F0224C /* GiftListItem.h */,
+				2FECA489194AC18800F0224C /* GiftListItem.m */,
 			);
 			path = GiftList;
 			sourceTree = "<group>";
@@ -255,9 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FECA487194AB9EF00F0224C /* GiftListItem+GL.m in Sources */,
+				2FECA431194AA2B700F0224C /* GLModel.xcdatamodeld in Sources */,
+				2FECA42C194A9ABE00F0224C /* GLTableViewController.m in Sources */,
 				2FECA3FC194A03A600F0224C /* main.m in Sources */,
-				2FECA409194A03A600F0224C /* GLGiftListVC.m in Sources */,
+				2FECA429194A97D600F0224C /* GLTableViewCell.m in Sources */,
 				2FECA400194A03A600F0224C /* GLAppDelegate.m in Sources */,
+				2FECA48A194AC18800F0224C /* GiftListItem.m in Sources */,
 				2FECA406194A03A600F0224C /* GLBrowseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +489,7 @@
 				2FECA423194A03A600F0224C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2FECA424194A03A600F0224C /* Build configuration list for PBXNativeTarget "GiftListTests" */ = {
 			isa = XCConfigurationList;
@@ -471,8 +498,22 @@
 				2FECA426194A03A600F0224C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2FECA42F194AA2B700F0224C /* GLModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2FECA430194AA2B700F0224C /* GLModel.xcdatamodel */,
+			);
+			currentVersion = 2FECA430194AA2B700F0224C /* GLModel.xcdatamodel */;
+			path = GLModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2FECA3E4194A03A600F0224C /* Project object */;
 }
