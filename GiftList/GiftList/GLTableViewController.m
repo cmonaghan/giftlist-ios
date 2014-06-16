@@ -96,6 +96,12 @@
         GLTableViewCell *cell = (GLTableViewCell *) rawCell;
         cell.title.text = info.title;
         cell.price.text = [NSString stringWithFormat:@"$%@", info.price];
+        
+        NSURL *url = [NSURL URLWithString: info.imageUrl];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        UIImage *image = [[UIImage alloc] initWithData:data];
+        
+        cell.image.image = image;
     }
 }
 

@@ -83,7 +83,7 @@
         <scene sceneID="875-Zj-DYJ">
             <objects>
                 <tableViewController title="Gift List" id="Gjk-Ir-4qa" customClass="GLTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="center" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="C4h-dz-e5t">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="C4h-dz-e5t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -108,9 +108,14 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DHS-3d-NGe">
+                                            <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="image" destination="DHS-3d-NGe" id="1RK-2H-PwD"/>
                                     <outlet property="price" destination="gRe-IW-XaJ" id="Bql-HA-j0g"/>
                                     <outlet property="title" destination="BUg-WX-j5F" id="Dfw-jF-k0T"/>
                                 </connections>
@@ -121,14 +126,14 @@
                             <outlet property="delegate" destination="Gjk-Ir-4qa" id="iYm-sr-DC2"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Gift List" id="pjB-ft-SEn"/>
+                    <navigationItem key="navigationItem" id="2KC-q9-pLd"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Ddh-cI-CDV">
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJ3-kd-vwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="502"/>
+            <point key="canvasLocation" x="1179" y="502"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -142,12 +147,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="CZ4-MO-1fc" kind="relationship" relationship="viewControllers" id="SUk-Ux-ee1"/>
-                        <segue destination="Gjk-Ir-4qa" kind="relationship" relationship="viewControllers" id="AJn-Js-A6S"/>
+                        <segue destination="ADk-AB-QpJ" kind="relationship" relationship="viewControllers" id="AJn-Js-A6S"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
+        </scene>
+        <!--Navigation Controller - Gift List-->
+        <scene sceneID="q9F-2o-482">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ADk-AB-QpJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Gift List" id="pjB-ft-SEn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jb4-Nw-GL3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gjk-Ir-4qa" kind="relationship" relationship="rootViewController" id="4QB-Gc-t23"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQr-Bd-e1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="502"/>
         </scene>
     </scenes>
     <resources>
