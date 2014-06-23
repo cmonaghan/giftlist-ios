@@ -37,6 +37,8 @@
 		2FECA42E194AA1D900F0224C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECA42D194AA1D900F0224C /* CoreData.framework */; };
 		2FECA431194AA2B700F0224C /* GLModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA42F194AA2B700F0224C /* GLModel.xcdatamodeld */; };
 		2FECA487194AB9EF00F0224C /* GiftListItem+GL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FECA486194AB9EF00F0224C /* GiftListItem+GL.m */; };
+		2FFB91E31957CC38005CF44F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFB91E21957CC38005CF44F /* FacebookSDK.framework */; };
+		2FFB91E61957CFB8005CF44F /* GLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFB91E51957CFB8005CF44F /* GLLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,9 @@
 		2FECA430194AA2B700F0224C /* GLModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GLModel.xcdatamodel; sourceTree = "<group>"; };
 		2FECA485194AB9EF00F0224C /* GiftListItem+GL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GiftListItem+GL.h"; sourceTree = "<group>"; };
 		2FECA486194AB9EF00F0224C /* GiftListItem+GL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GiftListItem+GL.m"; sourceTree = "<group>"; };
+		2FFB91E21957CC38005CF44F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		2FFB91E41957CFB8005CF44F /* GLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLLoginViewController.h; sourceTree = "<group>"; };
+		2FFB91E51957CFB8005CF44F /* GLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,7 @@
 				2FAB6C3C194ACC7600617160 /* CFNetwork.framework in Frameworks */,
 				2FAB6C3A194ACC7100617160 /* AudioToolbox.framework in Frameworks */,
 				2FECA42E194AA1D900F0224C /* CoreData.framework in Frameworks */,
+				2FFB91E31957CC38005CF44F /* FacebookSDK.framework in Frameworks */,
 				2FECA3F4194A03A600F0224C /* UIKit.framework in Frameworks */,
 				2FECA3F0194A03A600F0224C /* Foundation.framework in Frameworks */,
 				2FAB6C38194ACC3A00617160 /* Parse.framework in Frameworks */,
@@ -148,6 +154,7 @@
 		2FECA3EE194A03A600F0224C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FFB91E21957CC38005CF44F /* FacebookSDK.framework */,
 				2FAB6C49194ACCBC00617160 /* SystemConfiguration.framework */,
 				2FAB6C47194ACCB200617160 /* StoreKit.framework */,
 				2FAB6C45194ACCAC00617160 /* Security.framework */,
@@ -186,6 +193,8 @@
 				2FECA486194AB9EF00F0224C /* GiftListItem+GL.m */,
 				2FAB6C4E194ADA6C00617160 /* GiftListItem.h */,
 				2FAB6C4F194ADA6C00617160 /* GiftListItem.m */,
+				2FFB91E41957CFB8005CF44F /* GLLoginViewController.h */,
+				2FFB91E51957CFB8005CF44F /* GLLoginViewController.m */,
 			);
 			path = GiftList;
 			sourceTree = "<group>";
@@ -323,6 +332,7 @@
 				2FECA3FC194A03A600F0224C /* main.m in Sources */,
 				2FECA429194A97D600F0224C /* GLTableViewCell.m in Sources */,
 				2FECA400194A03A600F0224C /* GLAppDelegate.m in Sources */,
+				2FFB91E61957CFB8005CF44F /* GLLoginViewController.m in Sources */,
 				2FAB6C50194ADA6C00617160 /* GiftListItem.m in Sources */,
 				2FECA406194A03A600F0224C /* GLBrowseVC.m in Sources */,
 			);
@@ -453,6 +463,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/gregorylee/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GiftList/GiftList-Prefix.pch";
@@ -473,6 +484,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/gregorylee/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GiftList/GiftList-Prefix.pch";

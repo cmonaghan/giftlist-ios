@@ -4,6 +4,38 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller - Login-->
+        <scene sceneID="KkV-cC-8nQ">
+            <objects>
+                <viewController id="Rct-ic-eJn" customClass="GLLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JPI-lP-acN"/>
+                        <viewControllerLayoutGuide type="bottom" id="bFl-QR-H8z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jd1-4b-6kV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XDJ-Uh-Cac" customClass="FBLoginView">
+                                <rect key="frame" x="20" y="239" width="280" height="90"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Rct-ic-eJn" id="2ng-Jf-hYQ"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Login" id="tEa-kC-1EL"/>
+                    <connections>
+                        <outlet property="loginView" destination="XDJ-Uh-Cac" id="dUb-jG-6qL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XCm-tb-aep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="-815"/>
+        </scene>
         <!--BrowseVC - First-->
         <scene sceneID="W3I-pn-N6e">
             <objects>
@@ -148,6 +180,7 @@
                     <connections>
                         <segue destination="CZ4-MO-1fc" kind="relationship" relationship="viewControllers" id="SUk-Ux-ee1"/>
                         <segue destination="ADk-AB-QpJ" kind="relationship" relationship="viewControllers" id="AJn-Js-A6S"/>
+                        <segue destination="Rct-ic-eJn" kind="relationship" relationship="viewControllers" id="Eh2-bk-RJ8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>

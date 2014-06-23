@@ -8,6 +8,7 @@
 
 #import "GLAppDelegate.h"
 #import <CoreData/CoreData.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @implementation GLAppDelegate
 
@@ -25,6 +26,7 @@
     [Parse setApplicationId:@"mKG57yaqkDZZ0CgM9Db0srg1gtozfIfkHjtdFjHy"
                   clientKey:@"d5ZLUhxJd65iA4MXnZOmep9khQ7FvvFQkuNTzygF"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    [FBLoginView class];
     
     return YES;
 }
@@ -56,6 +58,18 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
+    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    
+    // You can add your app-specific url handling code here if needed
+    
+    return wasHandled;
+}
 
 - (void)saveContext
 {
