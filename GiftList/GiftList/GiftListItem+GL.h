@@ -7,7 +7,9 @@
 //
 
 #import "GiftListItem.h"
+#import <Parse/Parse.h>
 
 @interface GiftListItem (GL)
 + (GiftListItem *) itemWithId:(NSString *) itemId usingManagedContext:(NSManagedObjectContext *) context;
++ (GiftListItem *) itemFromPF:(PFObject *) pfObject withContext:(NSManagedObjectContext *) context;
 @end

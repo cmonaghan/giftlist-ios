@@ -57,6 +57,25 @@
     [self nextItem];
 }
 
+- (void) nextItem {
+    PFQuery *query = [PFQuery queryWithClassName:@"Items"];
+    query.skip = self.counter;
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *item, NSError *error) {
+        NSLog(@"%@", item);
+        self.currentItem = [GiftListItem itemFromPF:item withContext:self.managedObjectContext];
+        [self.managedObjectContext save:nil];
+        self.counter++;
+        
+        [self display:self.currentItem];
+    }];
+}
+
+- (void) display:(GiftListItem *) item {
+    [self setPrice:item.price];
+    [self setImage:item.imageUrl];
+    [self setDescription:item.descriptionText];
+}
+
 - (void) setPrice:(NSNumber *) price {
     if (price) {
         self.priceLabel.text = [NSString stringWithFormat:@"$%@", price];
@@ -83,37 +102,5 @@
     } else {
         self.descriptionText.text = DEFAULT_DESCRIPTION;
     }
-}
-
-- (void) nextItem {
-    PFQuery *query = [PFQuery queryWithClassName:@"Items"];
-    query.skip = self.counter;
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *item, NSError *error) {
-        NSLog(@"%@", item);
-        self.currentItem = [self itemFromPF:item];
-        [self.managedObjectContext save:nil];
-        self.counter++;
-        
-        [self display:self.currentItem];
-    }];
-}
-
-- (GiftListItem *) itemFromPF:(PFObject *) pfObject {
-    GiftListItem* item = [GiftListItem itemWithId:pfObject.objectId usingManagedContext:self.managedObjectContext];
-    NSNumber * thisPrice = pfObject[@"price"];
-    if(thisPrice == (id)[NSNull null]) {
-        thisPrice = 0;
-    }
-    item.price = thisPrice;
-    item.title = pfObject[@"title"];
-    item.imageUrl = pfObject[@"productImage"];
-    item.descriptionText = pfObject[@"title"];
-    return item;
-}
-
-- (void) display:(GiftListItem *) item {
-    [self setPrice:item.price];
-    [self setImage:item.imageUrl];
-    [self setDescription:item.descriptionText];
 }
 @end

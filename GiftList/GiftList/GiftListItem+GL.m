@@ -33,4 +33,17 @@
     return g;
 }
 
++ (GiftListItem *) itemFromPF:(PFObject *) pfObject withContext:(NSManagedObjectContext *) context {
+    GiftListItem* item = [GiftListItem itemWithId:pfObject.objectId usingManagedContext:context];
+    NSNumber * thisPrice = pfObject[@"price"];
+    if(thisPrice == (id)[NSNull null]) {
+        thisPrice = 0;
+    }
+    item.price = thisPrice;
+    item.title = pfObject[@"title"];
+    item.imageUrl = pfObject[@"productImage"];
+    item.descriptionText = pfObject[@"title"];
+    return item;
+}
+
 @end
